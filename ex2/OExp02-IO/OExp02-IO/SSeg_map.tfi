@@ -1,0 +1,10 @@
+
+
+
+// Instantiate the module
+SSeg_map instance_name (
+    .Disp_num(Disp_num), 
+    .Seg_map(Seg_map)
+    );
+
+

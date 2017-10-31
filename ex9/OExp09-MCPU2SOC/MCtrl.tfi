@@ -1,0 +1,30 @@
+
+
+
+// Instantiate the module
+MCtrl instance_name (
+    .clk(clk), 
+    .reset(reset), 
+    .Inst_in(Inst_in), 
+    .zero(zero), 
+    .overflow(overflow), 
+    .MIO_ready(MIO_ready), 
+    .MemRead(MemRead), 
+    .MemWrite(MemWrite), 
+    .ALU_operation(ALU_operation), 
+    .state_out(state_out), 
+    .CPU_MIO(CPU_MIO), 
+    .IorD(IorD), 
+    .IRWrite(IRWrite), 
+    .RegDst(RegDst), 
+    .RegWrite(RegWrite), 
+    .MemtoReg(MemtoReg), 
+    .ALUSrcA(ALUSrcA), 
+    .ALUSrcB(ALUSrcB), 
+    .PCSource(PCSource), 
+    .PCWrite(PCWrite), 
+    .PCWriteCond(PCWriteCond), 
+    .Branch(Branch)
+    );
+
+

@@ -1,0 +1,2 @@
+sch2verilog -intstyle ise -family kintex7 -tionly {} -tiext tfi -w E:/ex2/OExp02-IO/OExp02-IO/MC14495_ZJU.sch MC14495_ZJU.tfi 
+sch2verilog -intstyle ise -family kintex7 -tionly {} -tiext tfi -w E:/ex2/OExp02-IO/OExp02-IO/MC14495_ZJU.sch MC14495_ZJU.tfi 

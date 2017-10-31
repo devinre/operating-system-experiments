@@ -1,0 +1,28 @@
+Command line:
+   SignalExt_32_test_isim_beh.exe
+     -simmode  gui
+     -simrunnum  3
+     -socket  7410
+
+Sun Mar 05 15:50:04 2017
+
+
+ Elaboration Time: 0.09375 sec
+
+ Current Memory Usage: 1010.43 Meg
+
+ Total Signals          : 16
+ Total Nets             : 46
+ Total Signal Drivers   : 7
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 9
+ Total Traceable Variables  : 19
+ Total Scalar Nets and Variables : 127
+
+ Total Simulation Time: 0.109375 sec
+
+ Current Memory Usage: 538.571 Meg
+
+Mon Mar 06 01:16:41 2017
+

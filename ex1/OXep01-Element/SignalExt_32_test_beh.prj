@@ -1,0 +1,3 @@
+verilog work "SignalExt_32.v"
+verilog work "SignalExt_32_test.v"
+verilog work "d:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

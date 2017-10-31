@@ -1,0 +1,28 @@
+Command line:
+   MUX8T1_32_TEST_isim_beh.exe
+     -simmode  gui
+     -simrunnum  2
+     -socket  4511
+
+Sun Mar 05 08:27:06 2017
+
+
+ Elaboration Time: 0.09375 sec
+
+ Current Memory Usage: 1010.39 Meg
+
+ Total Signals          : 23
+ Total Nets             : 304
+ Total Signal Drivers   : 15
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 18
+ Total Traceable Variables  : 28
+ Total Scalar Nets and Variables : 675
+
+ Total Simulation Time: 0.09375 sec
+
+ Current Memory Usage: 538.534 Meg
+
+Sun Mar 05 13:47:32 2017
+

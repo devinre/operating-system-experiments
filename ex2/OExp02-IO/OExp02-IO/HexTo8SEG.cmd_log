@@ -1,0 +1,2 @@
+vhdtdtfi -lang verilog -prj OExp02-IO -o E:/ex2/OExp02-IO/HexTo8SEG.tfi -lib work E:/ex2/OExp02-IO//HexTo8SEG.v -module HexTo8SEG -template d:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+vhdtdtfi -lang verilog -prj OExp02-IO -o E:/ex2/OExp02-IO/HexTo8SEG.tfi -lib work E:/ex2/OExp02-IO//HexTo8SEG.v -module HexTo8SEG -template d:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

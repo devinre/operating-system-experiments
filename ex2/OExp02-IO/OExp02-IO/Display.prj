@@ -1,0 +1,6 @@
+verilog work "MC14495_ZJU.v"
+verilog work "SSeg_map.v"
+verilog work "P2S_IO.v"
+verilog work "MUX2T1_64.v"
+verilog work "HexTo8SEG.v"
+verilog work "Display.v"

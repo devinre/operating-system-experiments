@@ -1,0 +1,1 @@
+sch2hdl,-sympath,E:/ex3/OExp03-IP2SOC/ipcore_dir,-intstyle,ise,-family,kintex7,-verilog,E:/ex3/OExp03-IP2SOC/OExp03_IP2SOC.vf,-w,E:/ex3/OExp03-IP2SOC/OExp03_IP2SOC.sch

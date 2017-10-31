@@ -1,0 +1,8 @@
+[Inputs]
+=A[31:0]=
+[Outputs]
+o
+[BiDir]
+[ATTRIBUTES]
+VeriModel or_bit_32
+

@@ -1,0 +1,2 @@
+sch2hdl,-sympath,E:/ex4/OExp04-IP2CPU/ipcore_dir,-intstyle,ise,-family,kintex7,-verilog,E:/ex4/OExp04-IP2CPU/Top_OExp04_IP2CPU.vf,-w,E:/ex4/OExp04-IP2CPU/Top_OExp04_IP2CPU.sch
+sch2hdl,-sympath,E:/ex4/OExp04-IP2CPU/ipcore_dir,-intstyle,ise,-family,kintex7,-verilog,E:/ex4/OExp04-IP2CPU/SCPU.vf,-w,E:/ex4/OExp04-IP2CPU/SCPU.sch

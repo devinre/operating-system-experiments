@@ -1,0 +1,7 @@
+sch2hdl -sympath E:/ex3/OExp03-IP2SOC/ipcore_dir -intstyle ise -family kintex7 -verilog OExp03_IP2SOC_drc.vf -w E:/ex3/OExp03-IP2SOC/OExp03_IP2SOC.sch 
+xst -intstyle ise -ifn "E:/ex3/OExp03-IP2SOC/OExp03_IP2SOC.xst" -ofn "E:/ex3/OExp03-IP2SOC/OExp03_IP2SOC.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc SOC-Sword.ucf -p xc7k160t-ffg676-2L OExp03_IP2SOC.ngc OExp03_IP2SOC.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o OExp03_IP2SOC_map.ncd OExp03_IP2SOC.ngd OExp03_IP2SOC.pcf 
+par -w -intstyle ise -ol high -mt off OExp03_IP2SOC_map.ncd OExp03_IP2SOC.ncd OExp03_IP2SOC.pcf 
+trce -intstyle ise -v 3 -s 2L -n 3 -fastpaths -xml OExp03_IP2SOC.twx OExp03_IP2SOC.ncd -o OExp03_IP2SOC.twr OExp03_IP2SOC.pcf -ucf SOC-Sword.ucf 
+bitgen -intstyle ise -f OExp03_IP2SOC.ut OExp03_IP2SOC.ncd 

@@ -1,0 +1,10 @@
+Running: d:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o E:/ex2/OExp02-IO/OExp02-IO/MC14495_ZJU_MC14495_ZJU_sch_tb_isim_beh.exe -prj E:/ex2/OExp02-IO/OExp02-IO/MC14495_ZJU_MC14495_ZJU_sch_tb_beh.prj work.MC14495_ZJU_MC14495_ZJU_sch_tb work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "E:/ex2/OExp02-IO/OExp02-IO/MC14495_ZJU.vf" into library work
+Analyzing Verilog file "E:/ex2/OExp02-IO/OExp02-IO/fasdfasfadsf.v" into library work
+ERROR:HDLCompiler:587 - "E:/ex2/OExp02-IO/OExp02-IO/fasdfasfadsf.v" Line 45: Missing compiler directive
+ERROR:HDLCompiler:598 - "E:/ex2/OExp02-IO/OExp02-IO/fasdfasfadsf.v" Line 5: Module <MC14495_ZJU_MC14495_ZJU_sch_tb> ignored due to previous errors.
+Verilog file E:/ex2/OExp02-IO/OExp02-IO/fasdfasfadsf.v ignored due to errors

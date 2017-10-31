@@ -1,0 +1,112 @@
+sch2hdl -sympath E:/ex2/OExp02-IO/ipcore_dir -intstyle ise -family kintex7 -verilog OExp02_IO_drc.vf -w E:/ex2/OExp02-IO/OExp02_IO.sch 
+xst -intstyle ise -ifn "E:/ex2/OExp02-IO/OExp02_IO.xst" -ofn "E:/ex2/OExp02-IO/OExp02_IO.syr" 
+xst -intstyle ise -ifn "E:/ex2/OExp02-IO/OExp02_IO.xst" -ofn "E:/ex2/OExp02-IO/OExp02_IO.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Exp02.ucf -p xc7k160t-ffg676-2L OExp02_IO.ngc OExp02_IO.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o OExp02_IO_map.ncd OExp02_IO.ngd OExp02_IO.pcf 
+xst -intstyle ise -ifn "E:/ex2/OExp02-IO/OExp02_IO.xst" -ofn "E:/ex2/OExp02-IO/OExp02_IO.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Exp02.ucf -p xc7k160t-ffg676-2L OExp02_IO.ngc OExp02_IO.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o OExp02_IO_map.ncd OExp02_IO.ngd OExp02_IO.pcf 
+par -w -intstyle ise -ol high -mt off OExp02_IO_map.ncd OExp02_IO.ncd OExp02_IO.pcf 
+trce -intstyle ise -v 3 -s 2L -n 3 -fastpaths -xml OExp02_IO.twx OExp02_IO.ncd -o OExp02_IO.twr OExp02_IO.pcf -ucf Exp02.ucf 
+bitgen -intstyle ise -f OExp02_IO.ut OExp02_IO.ncd 
+xst -intstyle ise -ifn "E:/ex2/OExp02-IO/OExp02_IO.xst" -ofn "E:/ex2/OExp02-IO/OExp02_IO.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Exp02.ucf -p xc7k160t-ffg676-2L OExp02_IO.ngc OExp02_IO.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o OExp02_IO_map.ncd OExp02_IO.ngd OExp02_IO.pcf 
+par -w -intstyle ise -ol high -mt off OExp02_IO_map.ncd OExp02_IO.ncd OExp02_IO.pcf 
+trce -intstyle ise -v 3 -s 2L -n 3 -fastpaths -xml OExp02_IO.twx OExp02_IO.ncd -o OExp02_IO.twr OExp02_IO.pcf -ucf Exp02.ucf 
+bitgen -intstyle ise -f OExp02_IO.ut OExp02_IO.ncd 
+xst -intstyle ise -ifn "E:/ex2/OExp02-IO/OExp02_IO.xst" -ofn "E:/ex2/OExp02-IO/OExp02_IO.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Exp02.ucf -p xc7k160t-ffg676-2L OExp02_IO.ngc OExp02_IO.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o OExp02_IO_map.ncd OExp02_IO.ngd OExp02_IO.pcf 
+par -w -intstyle ise -ol high -mt off OExp02_IO_map.ncd OExp02_IO.ncd OExp02_IO.pcf 
+trce -intstyle ise -v 3 -s 2L -n 3 -fastpaths -xml OExp02_IO.twx OExp02_IO.ncd -o OExp02_IO.twr OExp02_IO.pcf -ucf Exp02.ucf 
+bitgen -intstyle ise -f OExp02_IO.ut OExp02_IO.ncd 
+xst -intstyle ise -ifn "E:/ex2/OExp02-IO/OExp02_IO.xst" -ofn "E:/ex2/OExp02-IO/OExp02_IO.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Exp02.ucf -p xc7k160t-ffg676-2L OExp02_IO.ngc OExp02_IO.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o OExp02_IO_map.ncd OExp02_IO.ngd OExp02_IO.pcf 
+par -w -intstyle ise -ol high -mt off OExp02_IO_map.ncd OExp02_IO.ncd OExp02_IO.pcf 
+trce -intstyle ise -v 3 -s 2L -n 3 -fastpaths -xml OExp02_IO.twx OExp02_IO.ncd -o OExp02_IO.twr OExp02_IO.pcf -ucf Exp02.ucf 
+bitgen -intstyle ise -f OExp02_IO.ut OExp02_IO.ncd 
+xst -intstyle ise -ifn "E:/ex2/OExp02-IO/OExp02_IO.xst" -ofn "E:/ex2/OExp02-IO/OExp02_IO.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Exp02.ucf -p xc7k160t-ffg676-2L OExp02_IO.ngc OExp02_IO.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o OExp02_IO_map.ncd OExp02_IO.ngd OExp02_IO.pcf 
+par -w -intstyle ise -ol high -mt off OExp02_IO_map.ncd OExp02_IO.ncd OExp02_IO.pcf 
+trce -intstyle ise -v 3 -s 2L -n 3 -fastpaths -xml OExp02_IO.twx OExp02_IO.ncd -o OExp02_IO.twr OExp02_IO.pcf -ucf Exp02.ucf 
+bitgen -intstyle ise -f OExp02_IO.ut OExp02_IO.ncd 
+xst -intstyle ise -ifn "E:/ex2/OExp02-IO/OExp02-IO/OExp02_IO.xst" -ofn "E:/ex2/OExp02-IO/OExp02-IO/OExp02_IO.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Exp02.ucf -p xc7k160t-ffg676-2L OExp02_IO.ngc OExp02_IO.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o OExp02_IO_map.ncd OExp02_IO.ngd OExp02_IO.pcf 
+par -w -intstyle ise -ol high -mt off OExp02_IO_map.ncd OExp02_IO.ncd OExp02_IO.pcf 
+trce -intstyle ise -v 3 -s 2L -n 3 -fastpaths -xml OExp02_IO.twx OExp02_IO.ncd -o OExp02_IO.twr OExp02_IO.pcf -ucf Exp02.ucf 
+bitgen -intstyle ise -f OExp02_IO.ut OExp02_IO.ncd 
+bitgen -intstyle ise -f OExp02_IO.ut OExp02_IO.ncd 
+xst -intstyle ise -ifn "E:/ex2/OExp02-IO/OExp02-IO/OExp02_IO.xst" -ofn "E:/ex2/OExp02-IO/OExp02-IO/OExp02_IO.syr" 
+xst -intstyle ise -ifn "E:/ex2/OExp02-IO/OExp02-IO/OExp02_IO.xst" -ofn "E:/ex2/OExp02-IO/OExp02-IO/OExp02_IO.syr" 
+xst -intstyle ise -ifn "E:/ex2/OExp02-IO/OExp02-IO/OExp02_IO.xst" -ofn "E:/ex2/OExp02-IO/OExp02-IO/OExp02_IO.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Exp02.ucf -p xc7k160t-ffg676-2L OExp02_IO.ngc OExp02_IO.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o OExp02_IO_map.ncd OExp02_IO.ngd OExp02_IO.pcf 
+par -w -intstyle ise -ol high -mt off OExp02_IO_map.ncd OExp02_IO.ncd OExp02_IO.pcf 
+trce -intstyle ise -v 3 -s 2L -n 3 -fastpaths -xml OExp02_IO.twx OExp02_IO.ncd -o OExp02_IO.twr OExp02_IO.pcf -ucf Exp02.ucf 
+bitgen -intstyle ise -f OExp02_IO.ut OExp02_IO.ncd 
+xst -intstyle ise -ifn "E:/ex2/OExp02-IO/OExp02-IO/OExp02_IO.xst" -ofn "E:/ex2/OExp02-IO/OExp02-IO/OExp02_IO.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Exp02.ucf -p xc7k160t-ffg676-2L OExp02_IO.ngc OExp02_IO.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o OExp02_IO_map.ncd OExp02_IO.ngd OExp02_IO.pcf 
+par -w -intstyle ise -ol high -mt off OExp02_IO_map.ncd OExp02_IO.ncd OExp02_IO.pcf 
+trce -intstyle ise -v 3 -s 2L -n 3 -fastpaths -xml OExp02_IO.twx OExp02_IO.ncd -o OExp02_IO.twr OExp02_IO.pcf -ucf Exp02.ucf 
+bitgen -intstyle ise -f OExp02_IO.ut OExp02_IO.ncd 
+xst -intstyle ise -ifn "E:/ex2/OExp02-IO/OExp02-IO/OExp02_IO.xst" -ofn "E:/ex2/OExp02-IO/OExp02-IO/OExp02_IO.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Exp02.ucf -p xc7k160t-ffg676-2L OExp02_IO.ngc OExp02_IO.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o OExp02_IO_map.ncd OExp02_IO.ngd OExp02_IO.pcf 
+par -w -intstyle ise -ol high -mt off OExp02_IO_map.ncd OExp02_IO.ncd OExp02_IO.pcf 
+trce -intstyle ise -v 3 -s 2L -n 3 -fastpaths -xml OExp02_IO.twx OExp02_IO.ncd -o OExp02_IO.twr OExp02_IO.pcf -ucf Exp02.ucf 
+bitgen -intstyle ise -f OExp02_IO.ut OExp02_IO.ncd 
+xst -intstyle ise -ifn "E:/ex2/OExp02-IO/OExp02-IO/OExp02_IO.xst" -ofn "E:/ex2/OExp02-IO/OExp02-IO/OExp02_IO.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Exp02.ucf -p xc7k160t-ffg676-2L OExp02_IO.ngc OExp02_IO.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o OExp02_IO_map.ncd OExp02_IO.ngd OExp02_IO.pcf 
+par -w -intstyle ise -ol high -mt off OExp02_IO_map.ncd OExp02_IO.ncd OExp02_IO.pcf 
+trce -intstyle ise -v 3 -s 2L -n 3 -fastpaths -xml OExp02_IO.twx OExp02_IO.ncd -o OExp02_IO.twr OExp02_IO.pcf -ucf Exp02.ucf 
+bitgen -intstyle ise -f OExp02_IO.ut OExp02_IO.ncd 
+xst -intstyle ise -ifn "E:/ex2/OExp02-IO/OExp02-IO/OExp02_IO.xst" -ofn "E:/ex2/OExp02-IO/OExp02-IO/OExp02_IO.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Exp02.ucf -p xc7k160t-ffg676-2L OExp02_IO.ngc OExp02_IO.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o OExp02_IO_map.ncd OExp02_IO.ngd OExp02_IO.pcf 
+par -w -intstyle ise -ol high -mt off OExp02_IO_map.ncd OExp02_IO.ncd OExp02_IO.pcf 
+trce -intstyle ise -v 3 -s 2L -n 3 -fastpaths -xml OExp02_IO.twx OExp02_IO.ncd -o OExp02_IO.twr OExp02_IO.pcf -ucf Exp02.ucf 
+bitgen -intstyle ise -f OExp02_IO.ut OExp02_IO.ncd 
+xst -intstyle ise -ifn "E:/ex2/OExp02-IO/OExp02-IO/OExp02_IO.xst" -ofn "E:/ex2/OExp02-IO/OExp02-IO/OExp02_IO.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Exp02.ucf -p xc7k160t-ffg676-2L OExp02_IO.ngc OExp02_IO.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o OExp02_IO_map.ncd OExp02_IO.ngd OExp02_IO.pcf 
+par -w -intstyle ise -ol high -mt off OExp02_IO_map.ncd OExp02_IO.ncd OExp02_IO.pcf 
+trce -intstyle ise -v 3 -s 2L -n 3 -fastpaths -xml OExp02_IO.twx OExp02_IO.ncd -o OExp02_IO.twr OExp02_IO.pcf -ucf Exp02.ucf 
+bitgen -intstyle ise -f OExp02_IO.ut OExp02_IO.ncd 
+xst -intstyle ise -ifn "E:/ex2/OExp02-IO/OExp02-IO/OExp02_IO.xst" -ofn "E:/ex2/OExp02-IO/OExp02-IO/OExp02_IO.syr" 
+xst -intstyle ise -ifn "E:/ex2/OExp02-IO/OExp02-IO/OExp02_IO.xst" -ofn "E:/ex2/OExp02-IO/OExp02-IO/OExp02_IO.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Exp02.ucf -p xc7k160t-ffg676-2L OExp02_IO.ngc OExp02_IO.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o OExp02_IO_map.ncd OExp02_IO.ngd OExp02_IO.pcf 
+par -w -intstyle ise -ol high -mt off OExp02_IO_map.ncd OExp02_IO.ncd OExp02_IO.pcf 
+trce -intstyle ise -v 3 -s 2L -n 3 -fastpaths -xml OExp02_IO.twx OExp02_IO.ncd -o OExp02_IO.twr OExp02_IO.pcf -ucf Exp02.ucf 
+bitgen -intstyle ise -f OExp02_IO.ut OExp02_IO.ncd 
+xst -intstyle ise -ifn "E:/ex2/OExp02-IO/OExp02-IO/OExp02_IO.xst" -ofn "E:/ex2/OExp02-IO/OExp02-IO/OExp02_IO.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Exp02.ucf -p xc7k160t-ffg676-2L OExp02_IO.ngc OExp02_IO.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o OExp02_IO_map.ncd OExp02_IO.ngd OExp02_IO.pcf 
+par -w -intstyle ise -ol high -mt off OExp02_IO_map.ncd OExp02_IO.ncd OExp02_IO.pcf 
+trce -intstyle ise -v 3 -s 2L -n 3 -fastpaths -xml OExp02_IO.twx OExp02_IO.ncd -o OExp02_IO.twr OExp02_IO.pcf -ucf Exp02.ucf 
+bitgen -intstyle ise -f OExp02_IO.ut OExp02_IO.ncd 
+xst -intstyle ise -ifn "E:/ex2/OExp02-IO/OExp02-IO/OExp02_IO.xst" -ofn "E:/ex2/OExp02-IO/OExp02-IO/OExp02_IO.syr" 
+xst -intstyle ise -ifn "E:/ex2/OExp02-IO/OExp02-IO/OExp02_IO.xst" -ofn "E:/ex2/OExp02-IO/OExp02-IO/OExp02_IO.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Exp02.ucf -p xc7k160t-ffg676-2L OExp02_IO.ngc OExp02_IO.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o OExp02_IO_map.ncd OExp02_IO.ngd OExp02_IO.pcf 
+par -w -intstyle ise -ol high -mt off OExp02_IO_map.ncd OExp02_IO.ncd OExp02_IO.pcf 
+trce -intstyle ise -v 3 -s 2L -n 3 -fastpaths -xml OExp02_IO.twx OExp02_IO.ncd -o OExp02_IO.twr OExp02_IO.pcf -ucf Exp02.ucf 
+bitgen -intstyle ise -f OExp02_IO.ut OExp02_IO.ncd 
+xst -intstyle ise -ifn "E:/ex2/OExp02-IO/OExp02-IO/OExp02_IO.xst" -ofn "E:/ex2/OExp02-IO/OExp02-IO/OExp02_IO.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Exp02.ucf -p xc7k160t-ffg676-2L OExp02_IO.ngc OExp02_IO.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o OExp02_IO_map.ncd OExp02_IO.ngd OExp02_IO.pcf 
+par -w -intstyle ise -ol high -mt off OExp02_IO_map.ncd OExp02_IO.ncd OExp02_IO.pcf 
+trce -intstyle ise -v 3 -s 2L -n 3 -fastpaths -xml OExp02_IO.twx OExp02_IO.ncd -o OExp02_IO.twr OExp02_IO.pcf -ucf Exp02.ucf 
+bitgen -intstyle ise -f OExp02_IO.ut OExp02_IO.ncd 
+xst -intstyle ise -ifn "E:/ex2/OExp02-IO/OExp02-IO/OExp02_IO.xst" -ofn "E:/ex2/OExp02-IO/OExp02-IO/OExp02_IO.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Exp02.ucf -p xc7k160t-ffg676-2L OExp02_IO.ngc OExp02_IO.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o OExp02_IO_map.ncd OExp02_IO.ngd OExp02_IO.pcf 
+par -w -intstyle ise -ol high -mt off OExp02_IO_map.ncd OExp02_IO.ncd OExp02_IO.pcf 
+trce -intstyle ise -v 3 -s 2L -n 3 -fastpaths -xml OExp02_IO.twx OExp02_IO.ncd -o OExp02_IO.twr OExp02_IO.pcf -ucf Exp02.ucf 
+bitgen -intstyle ise -f OExp02_IO.ut OExp02_IO.ncd 

@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj OExp03-IP2SOC -o E:/ex3/OExp03-IP2SOC/Display.tfi -lib work E:/ex3/OExp03-IP2SOC//Display_IO.v -module Display -template d:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

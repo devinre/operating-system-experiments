@@ -1,0 +1,21 @@
+
+
+
+// Instantiate the module
+SAnti_jitter instance_name (
+    .clk(clk), 
+    .RSTN(RSTN), 
+    .readn(readn), 
+    .Key_y(Key_y), 
+    .Key_x(Key_x), 
+    .SW(SW), 
+    .Key_out(Key_out), 
+    .Key_ready(Key_ready), 
+    .pulse_out(pulse_out), 
+    .BTN_OK(BTN_OK), 
+    .SW_OK(SW_OK), 
+    .CR(CR), 
+    .rst(rst)
+    );
+
+

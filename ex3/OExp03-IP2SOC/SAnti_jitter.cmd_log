@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj OExp03-IP2SOC -o E:/ex3/OExp03-IP2SOC/SAnti_jitter.tfi -lib work E:/ex3/OExp03-IP2SOC//SAnti_jitter_IO.v -module SAnti_jitter -template d:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

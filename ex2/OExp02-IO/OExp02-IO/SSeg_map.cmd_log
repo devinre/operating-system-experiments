@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj OExp02-IO -o E:/ex2/OExp02-IO/SSeg_map.tfi -lib work E:/ex2/OExp02-IO//SSeg_map.v -module SSeg_map -template d:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

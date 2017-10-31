@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "E:/ex7/OExp07-ExtSCPU/Data_path_more_Data_path_more_sch_tb_isim_beh.exe" -prj "E:/ex7/OExp07-ExtSCPU/Data_path_more_Data_path_more_sch_tb_beh.prj" "work.Data_path_more_Data_path_more_sch_tb" "work.glbl" 

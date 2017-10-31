@@ -1,0 +1,18 @@
+sch2sym -intstyle ise -family kintex7 -refsym OExp01_MUX E:/ex1/OExp01-MUX/OExp01_MUX.sch E:/ex1/OExp01-MUX/OExp01_MUX.sym 
+sch2hdl -sympath E:/ex1/OExp01-MUX/ipcore_dir -intstyle ise -family kintex7 -verilog OExp01_MUX_drc.vf -w E:/ex1/OExp01-MUX/OExp01_MUX.sch 
+sch2hdl -sympath E:/ex1/OExp01-MUX/ipcore_dir -intstyle ise -family kintex7 -verilog OExp01_MUX_drc.vf -w E:/ex1/OExp01-MUX/OExp01_MUX.sch 
+sch2hdl -sympath E:/ex1/OExp01-MUX/ipcore_dir -intstyle ise -family kintex7 -verilog OExp01_MUX_drc.vf -w E:/ex1/OExp01-MUX/OExp01_MUX.sch 
+sch2hdl -sympath E:/ex1/OExp01-MUX/ipcore_dir -intstyle ise -family kintex7 -verilog OExp01_MUX_drc.vf -w E:/ex1/OExp01-MUX/OExp01_MUX.sch 
+xst -intstyle ise -ifn "E:/ex1/OExp01-MUX/OExp01_MUX.xst" -ofn "E:/ex1/OExp01-MUX/OExp01_MUX.syr" 
+xst -intstyle ise -ifn "E:/ex1/OExp01-MUX/OExp01_MUX.xst" -ofn "E:/ex1/OExp01-MUX/OExp01_MUX.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc OExp01.ucf -p xc7k160t-ffg676-2L OExp01_MUX.ngc OExp01_MUX.ngd  
+xst -intstyle ise -ifn "E:/ex1/OExp01-MUX/OExp01_MUX.xst" -ofn "E:/ex1/OExp01-MUX/OExp01_MUX.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc OExp01.ucf -p xc7k160t-ffg676-2L OExp01_MUX.ngc OExp01_MUX.ngd  
+xst -intstyle ise -ifn "E:/ex1/OExp01-MUX/OExp01_MUX.xst" -ofn "E:/ex1/OExp01-MUX/OExp01_MUX.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc OExp01.ucf -p xc7k160t-ffg676-2L OExp01_MUX.ngc OExp01_MUX.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc OExp01.ucf -p xc7k160t-ffg676-2L OExp01_MUX.ngc OExp01_MUX.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o OExp01_MUX_map.ncd OExp01_MUX.ngd OExp01_MUX.pcf 
+par -w -intstyle ise -ol high -mt off OExp01_MUX_map.ncd OExp01_MUX.ncd OExp01_MUX.pcf 
+trce -intstyle ise -v 3 -s 2L -n 3 -fastpaths -xml OExp01_MUX.twx OExp01_MUX.ncd -o OExp01_MUX.twr OExp01_MUX.pcf -ucf OExp01.ucf 
+bitgen -intstyle ise -f OExp01_MUX.ut OExp01_MUX.ncd 
+bitgen -intstyle ise -f OExp01_MUX.ut OExp01_MUX.ncd 

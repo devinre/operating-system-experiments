@@ -1,0 +1,499 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Top_OExp07_IP2CPU.vf
+// /___/   /\     Timestamp : 05/09/2017 16:58:49
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -sympath E:/ex7/OExp07-ExtSCPU/ipcore_dir -intstyle ise -family kintex7 -verilog E:/ex7/OExp07-ExtSCPU/Top_OExp07_IP2CPU.vf -w E:/ex7/OExp07-ExtSCPU/Top_OExp07_IP2CPU.sch
+//Design Name: Top_OExp07_IP2CPU
+//Device: kintex7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module alu_MUSER_Top_OExp07_IP2CPU(A, 
+                                   ALU_Ctr, 
+                                   B, 
+                                   Co, 
+                                   overflow, 
+                                   res, 
+                                   zero);
+
+    input [31:0] A;
+    input [2:0] ALU_Ctr;
+    input [31:0] B;
+   output Co;
+   output overflow;
+   output [31:0] res;
+   output zero;
+   
+   wire N0;
+   wire [31:0] XLXN_21;
+   wire [31:0] XLXN_22;
+   wire [31:0] XLXN_23;
+   wire [31:0] XLXN_24;
+   wire [31:0] XLXN_25;
+   wire [31:0] XLXN_26;
+   wire [31:0] XLXN_27;
+   wire [31:0] XLXN_29;
+   wire Co_DUMMY;
+   wire [31:0] res_DUMMY;
+   
+   assign Co = Co_DUMMY;
+   assign res[31:0] = res_DUMMY[31:0];
+   and32  ALU_U1 (.A(A[31:0]), 
+                 .B(B[31:0]), 
+                 .res(XLXN_21[31:0]));
+   or32  ALU_U2 (.A(A[31:0]), 
+                .B(B[31:0]), 
+                .res(XLXN_22[31:0]));
+   xor32  ALU_U3 (.A(A[31:0]), 
+                 .B(B[31:0]), 
+                 .res(XLXN_24[31:0]));
+   nor32  ALU_U4 (.A(A[31:0]), 
+                 .B(B[31:0]), 
+                 .res(XLXN_25[31:0]));
+   srl32  ALU_U5 (.A(A[31:0]), 
+                 .B(B[31:0]), 
+                 .res(XLXN_26[31:0]));
+   or_bit_32  ALU_Zero (.A(res_DUMMY[31:0]), 
+                       .o(zero));
+   MUX8T1_32  MUXALU (.I0(XLXN_21[31:0]), 
+                     .I1(XLXN_22[31:0]), 
+                     .I2(XLXN_23[31:0]), 
+                     .I3(XLXN_24[31:0]), 
+                     .I4(XLXN_25[31:0]), 
+                     .I5(XLXN_26[31:0]), 
+                     .I6(XLXN_23[31:0]), 
+                     .I7({N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, 
+         N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, 
+         N0, Co_DUMMY}), 
+                     .s(ALU_Ctr[2:0]), 
+                     .o(res_DUMMY[31:0]));
+   GND  XLXI_11 (.G(N0));
+   ADC32  XLXI_12 (.A(A[31:0]), 
+                  .B(XLXN_29[31:0]), 
+                  .C0(ALU_Ctr[2]), 
+                  .Co(Co_DUMMY), 
+                  .S(XLXN_23[31:0]));
+   SignalExt_32  XLXI_14 (.S(ALU_Ctr[2]), 
+                         .So(XLXN_27[31:0]));
+   xor32  XLXI_15 (.A(XLXN_27[31:0]), 
+                  .B(B[31:0]), 
+                  .res(XLXN_29[31:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module Data_path_more_MUSER_Top_OExp07_IP2CPU(ALUSrc_B, 
+                                              ALU_Control, 
+                                              Branch, 
+                                              clk, 
+                                              DatatoReg, 
+                                              Data_in, 
+                                              inst_field, 
+                                              Jal, 
+                                              RegDst, 
+                                              RegWrite, 
+                                              rst, 
+                                              ALU_out, 
+                                              Data_out, 
+                                              overflow, 
+                                              PC_out, 
+                                              zero);
+
+    input ALUSrc_B;
+    input [2:0] ALU_Control;
+    input [1:0] Branch;
+    input clk;
+    input [1:0] DatatoReg;
+    input [31:0] Data_in;
+    input [25:0] inst_field;
+    input Jal;
+    input RegDst;
+    input RegWrite;
+    input rst;
+   output [31:0] ALU_out;
+   output [31:0] Data_out;
+   output overflow;
+   output [31:0] PC_out;
+   output zero;
+   
+   wire [31:0] branch_pc;
+   wire [31:0] Imm_32;
+   wire N0;
+   wire [31:0] pc_4;
+   wire [31:0] rdata_A;
+   wire V5;
+   wire [31:0] XLXN_10;
+   wire [31:0] XLXN_27;
+   wire [4:0] XLXN_66;
+   wire [4:0] XLXN_67;
+   wire [31:0] XLXN_73;
+   wire [31:0] ALU_out_DUMMY;
+   wire [31:0] Data_out_DUMMY;
+   wire [31:0] PC_out_DUMMY;
+   
+   assign ALU_out[31:0] = ALU_out_DUMMY[31:0];
+   assign Data_out[31:0] = Data_out_DUMMY[31:0];
+   assign PC_out[31:0] = PC_out_DUMMY[31:0];
+   add_32  ADD_Branch (.a(pc_4[31:0]), 
+                      .b({Imm_32[29:0], N0, N0}), 
+                      .c(branch_pc[31:0]));
+   add_32  ADD_PC_4 (.a(PC_out_DUMMY[31:0]), 
+                    .b({N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, 
+         N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, V5, N0, 
+         N0}), 
+                    .c(pc_4[31:0]));
+   Ext_32  Ext (.imm_16(inst_field[15:0]), 
+               .Imm_32(Imm_32[31:0]));
+   MUX2T1_5  MUXD1 (.I0(inst_field[20:16]), 
+                   .I1({V5, V5, V5, V5, V5}), 
+                   .s(Jal), 
+                   .o(XLXN_66[4:0]));
+   MUX2T1_32  MUXD3 (.I0(Data_out_DUMMY[31:0]), 
+                    .I1(Imm_32[31:0]), 
+                    .s(ALUSrc_B), 
+                    .o(XLXN_27[31:0]));
+   REG32  PC (.CE(V5), 
+             .clk(clk), 
+             .D(XLXN_10[31:0]), 
+             .rst(rst), 
+             .Q(PC_out_DUMMY[31:0]));
+   alu_MUSER_Top_OExp07_IP2CPU  U1_1 (.A(rdata_A[31:0]), 
+                                     .ALU_Ctr(ALU_Control[2:0]), 
+                                     .B(XLXN_27[31:0]), 
+                                     .overflow(overflow), 
+                                     .res(ALU_out_DUMMY[31:0]), 
+                                     .zero(zero));
+   Regs  U2_2 (.clk(clk), 
+              .L_S(RegWrite), 
+              .rst(rst), 
+              .R_addr_A(inst_field[25:21]), 
+              .R_addr_B(inst_field[20:16]), 
+              .Wt_addr(XLXN_67[4:0]), 
+              .Wt_data(XLXN_73[31:0]), 
+              .rdata_A(rdata_A[31:0]), 
+              .rdata_B(Data_out_DUMMY[31:0]));
+   VCC  XLXI_2 (.P(V5));
+   GND  XLXI_9 (.G(N0));
+   MUX4T1_32  XLXI_10 (.I0(pc_4[31:0]), 
+                      .I1(branch_pc[31:0]), 
+                      .I2({pc_4[31:28], inst_field[25:0], N0, N0}), 
+                      .I3(rdata_A[31:0]), 
+                      .s(Branch[1:0]), 
+                      .o(XLXN_10[31:0]));
+   MUX2T1_5  XLXI_11 (.I0(XLXN_66[4:0]), 
+                     .I1(inst_field[15:11]), 
+                     .s(RegDst), 
+                     .o(XLXN_67[4:0]));
+   MUX4T1_32  XLXI_12 (.I0(ALU_out_DUMMY[31:0]), 
+                      .I1(Data_in[31:0]), 
+                      .I2({inst_field[15:0], N0, N0, N0, N0, N0, N0, N0, N0, 
+         N0, N0, N0, N0, N0, N0, N0, N0}), 
+                      .I3(pc_4[31:0]), 
+                      .s(DatatoReg[1:0]), 
+                      .o(XLXN_73[31:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module SCPU_MUSER_Top_OExp07_IP2CPU(clk, 
+                                    Data_in, 
+                                    inst_in, 
+                                    INT, 
+                                    MIO_ready, 
+                                    reset, 
+                                    Addr_out, 
+                                    CPU_MIO, 
+                                    Data_out, 
+                                    mem_w, 
+                                    PC_out);
+
+    input clk;
+    input [31:0] Data_in;
+    input [31:0] inst_in;
+    input INT;
+    input MIO_ready;
+    input reset;
+   output [31:0] Addr_out;
+   output CPU_MIO;
+   output [31:0] Data_out;
+   output mem_w;
+   output [31:0] PC_out;
+   
+   wire [1:0] XLXN_11;
+   wire [1:0] XLXN_13;
+   wire [2:0] XLXN_15;
+   wire XLXN_22;
+   wire XLXN_23;
+   wire XLXN_25;
+   wire XLXN_27;
+   wire XLXN_35;
+   
+   SCPU_ctrl_more  XLXI_1 (.Fun(inst_in[5:0]), 
+                          .MIO_ready(MIO_ready), 
+                          .OPcode(inst_in[31:26]), 
+                          .zero(XLXN_35), 
+                          .ALUSrc_B(XLXN_23), 
+                          .ALU_Control(XLXN_15[2:0]), 
+                          .Branch(XLXN_13[1:0]), 
+                          .CPU_MIO(CPU_MIO), 
+                          .DatatoReg(XLXN_11[1:0]), 
+                          .Jal(XLXN_25), 
+                          .mem_w(mem_w), 
+                          .RegDst(XLXN_22), 
+                          .RegWrite(XLXN_27));
+   Data_path_more_MUSER_Top_OExp07_IP2CPU  XLXI_2 (.ALUSrc_B(XLXN_23), 
+                                                  .ALU_Control(XLXN_15[2:0]), 
+                                                  .Branch(XLXN_13[1:0]), 
+                                                  .clk(clk), 
+                                                  .DatatoReg(XLXN_11[1:0]), 
+                                                  .Data_in(Data_in[31:0]), 
+                                                  .inst_field(inst_in[25:0]), 
+                                                  .Jal(XLXN_25), 
+                                                  .RegDst(XLXN_22), 
+                                                  .RegWrite(XLXN_27), 
+                                                  .rst(reset), 
+                                                  .ALU_out(Addr_out[31:0]), 
+                                                  .Data_out(Data_out[31:0]), 
+                                                  .overflow(), 
+                                                  .PC_out(PC_out[31:0]), 
+                                                  .zero(XLXN_35));
+endmodule
+`timescale 1ns / 1ps
+
+module Top_OExp07_IP2CPU(clk_100mhz, 
+                         K_COL, 
+                         RSTN, 
+                         SW, 
+                         AN, 
+                         Buzzer, 
+                         CR, 
+                         K_ROW, 
+                         LED, 
+                         LEDCLK, 
+                         LEDCLR, 
+                         LEDDT, 
+                         LEDEN, 
+                         RDY, 
+                         readn, 
+                         SEGCLK, 
+                         SEGCLR, 
+                         SEGDT, 
+                         SEGEN, 
+                         SEGMENT);
+
+    input clk_100mhz;
+    input [3:0] K_COL;
+    input RSTN;
+    input [15:0] SW;
+   output [3:0] AN;
+   output Buzzer;
+   output CR;
+   output [4:0] K_ROW;
+   output [7:0] LED;
+   output LEDCLK;
+   output LEDCLR;
+   output LEDDT;
+   output LEDEN;
+   output RDY;
+   output readn;
+   output SEGCLK;
+   output SEGCLR;
+   output SEGDT;
+   output SEGEN;
+   output [7:0] SEGMENT;
+   
+   wire [31:0] Addr_out;
+   wire [31:0] Ai;
+   wire [31:0] Bi;
+   wire [7:0] blink;
+   wire [3:0] BTN_OK;
+   wire Clk_CPU;
+   wire [31:0] Counter_out;
+   wire [31:0] CPU2IO;
+   wire [31:0] Data_in;
+   wire [31:0] Data_out;
+   wire [31:0] Disp_num;
+   wire [31:0] Div;
+   wire GPIOF0;
+   wire [31:0] inst;
+   wire IO_clk;
+   wire [15:0] LED_out;
+   wire [7:0] LE_out;
+   wire N0;
+   wire [31:0] PC;
+   wire [7:0] point_out;
+   wire [3:0] Pulse;
+   wire rst;
+   wire [15:0] SW_OK;
+   wire V5;
+   wire [4:0] XLXN_11;
+   wire XLXN_57;
+   wire XLXN_60;
+   wire [31:0] XLXN_64;
+   wire [0:0] XLXN_65;
+   wire [9:0] XLXN_66;
+   wire [31:0] XLXN_67;
+   wire XLXN_71;
+   wire XLXN_75;
+   wire XLXN_76;
+   wire XLXN_77;
+   wire [1:0] XLXN_78;
+   wire RDY_DUMMY;
+   wire readn_DUMMY;
+   
+   assign RDY = RDY_DUMMY;
+   assign readn = readn_DUMMY;
+   SEnter_2_32  M4 (.BTN(BTN_OK[2:0]), 
+                   .clk(clk_100mhz), 
+                   .Ctrl({SW_OK[7:5], SW_OK[15], SW_OK[0]}), 
+                   .Din(XLXN_11[4:0]), 
+                   .D_ready(RDY_DUMMY), 
+                   .Ai(Ai[31:0]), 
+                   .Bi(Bi[31:0]), 
+                   .blink(blink[7:0]), 
+                   .readn(readn_DUMMY));
+   SCPU_MUSER_Top_OExp07_IP2CPU  U1 (.clk(Clk_CPU), 
+                                    .Data_in(Data_in[31:0]), 
+                                    .inst_in(inst[31:0]), 
+                                    .INT(XLXN_57), 
+                                    .MIO_ready(), 
+                                    .reset(rst), 
+                                    .Addr_out(Addr_out[31:0]), 
+                                    .CPU_MIO(), 
+                                    .Data_out(Data_out[31:0]), 
+                                    .mem_w(XLXN_60), 
+                                    .PC_out(PC[31:0]));
+   ROM_D  U2 (.a(PC[11:2]), 
+             .spo(inst[31:0]));
+   RAM_B  U3 (.addra(XLXN_66[9:0]), 
+             .clka(clk_100mhz), 
+             .dina(XLXN_64[31:0]), 
+             .wea(XLXN_65[0]), 
+             .douta(XLXN_67[31:0]));
+   MIO_BUS  U4 (.addr_bus(Addr_out[31:0]), 
+               .BTN(BTN_OK[3:0]), 
+               .clk(clk_100mhz), 
+               .counter_out(Counter_out[31:0]), 
+               .counter0_out(XLXN_57), 
+               .counter1_out(XLXN_76), 
+               .counter2_out(XLXN_75), 
+               .Cpu_data2bus(Data_out[31:0]), 
+               .led_out(LED_out[15:0]), 
+               .mem_w(XLXN_60), 
+               .ram_data_out(XLXN_67[31:0]), 
+               .rst(rst), 
+               .SW(SW_OK[15:0]), 
+               .counter_we(XLXN_77), 
+               .Cpu_data4bus(Data_in[31:0]), 
+               .data_ram_we(XLXN_65[0]), 
+               .GPIOe0000000_we(XLXN_71), 
+               .GPIOf0000000_we(GPIOF0), 
+               .Peripheral_in(CPU2IO[31:0]), 
+               .ram_addr(XLXN_66[9:0]), 
+               .ram_data_in(XLXN_64[31:0]));
+   Multi_8CH32  U5 (.clk(IO_clk), 
+                   .Data0(CPU2IO[31:0]), 
+                   .data1({N0, N0, PC[31:2]}), 
+                   .data2(inst[31:0]), 
+                   .data3(Counter_out[31:0]), 
+                   .data4(Addr_out[31:0]), 
+                   .data5(Data_out[31:0]), 
+                   .data6(Data_in[31:0]), 
+                   .data7(PC[31:0]), 
+                   .EN(XLXN_71), 
+                   .LES({N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, 
+         N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, 
+         N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, 
+         N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0}), 
+                   .point_in({Div[31:0], Div[31:0]}), 
+                   .rst(rst), 
+                   .Test(SW_OK[7:5]), 
+                   .Disp_num(Disp_num[31:0]), 
+                   .LE_out(LE_out[7:0]), 
+                   .point_out(point_out[7:0]));
+   Display  U6 (.clk(clk_100mhz), 
+               .flash(Div[25]), 
+               .Hexs(Disp_num[31:0]), 
+               .LES(LE_out[7:0]), 
+               .point(point_out[7:0]), 
+               .rst(rst), 
+               .Start(Div[20]), 
+               .Text(SW_OK[0]), 
+               .segclk(SEGCLK), 
+               .segclrn(SEGCLR), 
+               .SEGEN(SEGEN), 
+               .segsout(SEGDT));
+   GPIO  U7 (.clk(IO_clk), 
+            .EN(GPIOF0), 
+            .P_Data(CPU2IO[31:0]), 
+            .rst(rst), 
+            .Start(Div[20]), 
+            .counter_set(XLXN_78[1:0]), 
+            .GPIOf0(), 
+            .ledclk(LEDCLK), 
+            .ledclrn(LEDCLR), 
+            .LEDEN(LEDEN), 
+            .ledsout(LEDDT), 
+            .LED_out(LED_out[15:0]));
+   clk_div  U8 (.clk(clk_100mhz), 
+               .rst(rst), 
+               .SW2(SW_OK[2]), 
+               .clkdiv(Div[31:0]), 
+               .Clk_CPU(Clk_CPU));
+   SAnti_jitter  U9 (.clk(clk_100mhz), 
+                    .Key_y(K_COL[3:0]), 
+                    .readn(readn_DUMMY), 
+                    .RSTN(RSTN), 
+                    .SW(SW[15:0]), 
+                    .BTN_OK(BTN_OK[3:0]), 
+                    .CR(CR), 
+                    .Key_out(XLXN_11[4:0]), 
+                    .Key_ready(RDY_DUMMY), 
+                    .Key_x(K_ROW[4:0]), 
+                    .pulse_out(Pulse[3:0]), 
+                    .rst(rst), 
+                    .SW_OK(SW_OK[15:0]));
+   Counter  U10 (.clk(IO_clk), 
+                .clk0(Div[6]), 
+                .clk1(Div[9]), 
+                .clk2(Div[11]), 
+                .counter_ch(XLXN_78[1:0]), 
+                .counter_val(CPU2IO[31:0]), 
+                .counter_we(XLXN_77), 
+                .rst(rst), 
+                .counter_out(Counter_out[31:0]), 
+                .counter0_OUT(XLXN_57), 
+                .counter1_OUT(XLXN_76), 
+                .counter2_OUT(XLXN_75));
+   Seg7_Dev  U61 (.flash(Div[25]), 
+                 .Hexs(Disp_num[31:0]), 
+                 .LES(LE_out[7:0]), 
+                 .point(point_out[7:0]), 
+                 .Scan({SW_OK[1], Div[19:18]}), 
+                 .SW0(SW_OK[0]), 
+                 .AN(AN[3:0]), 
+                 .SEGMENT(SEGMENT[7:0]));
+   PIO  U71 (.clk(IO_clk), 
+            .EN(GPIOF0), 
+            .PData_in(CPU2IO[31:0]), 
+            .rst(rst), 
+            .counter_set(), 
+            .GPIOf0(), 
+            .LED_out(LED[7:0]));
+   VCC  XLXI_14 (.P(V5));
+   GND  XLXI_15 (.G(N0));
+   INV  XLXI_16 (.I(Clk_CPU), 
+                .O(IO_clk));
+   BUF  XLXI_17 (.I(V5), 
+                .O(Buzzer));
+endmodule

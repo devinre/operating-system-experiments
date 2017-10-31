@@ -1,0 +1,9 @@
+[Inputs]
+=a[31:0]=
+=b[31:0]=
+[Outputs]
+=c[31:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel add_32
+

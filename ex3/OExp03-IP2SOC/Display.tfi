@@ -1,0 +1,20 @@
+
+
+
+// Instantiate the module
+Display instance_name (
+    .clk(clk), 
+    .rst(rst), 
+    .Start(Start), 
+    .Text(Text), 
+    .flash(flash), 
+    .Hexs(Hexs), 
+    .point(point), 
+    .LES(LES), 
+    .segclk(segclk), 
+    .segsout(segsout), 
+    .SEGEN(SEGEN), 
+    .segclrn(segclrn)
+    );
+
+

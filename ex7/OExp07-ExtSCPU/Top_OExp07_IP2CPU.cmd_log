@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "E:/ex7/OExp07-ExtSCPU/Top_OExp07_IP2CPU.xst" -ofn "E:/ex7/OExp07-ExtSCPU/Top_OExp07_IP2CPU.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc SOC-Sword.ucf -p xc7k160t-ffg676-2L Top_OExp07_IP2CPU.ngc Top_OExp07_IP2CPU.ngd  
+map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Top_OExp07_IP2CPU_map.ncd Top_OExp07_IP2CPU.ngd Top_OExp07_IP2CPU.pcf 
+par -w -intstyle ise -ol high -mt off Top_OExp07_IP2CPU_map.ncd Top_OExp07_IP2CPU.ncd Top_OExp07_IP2CPU.pcf 
+trce -intstyle ise -v 3 -s 2L -n 3 -fastpaths -xml Top_OExp07_IP2CPU.twx Top_OExp07_IP2CPU.ncd -o Top_OExp07_IP2CPU.twr Top_OExp07_IP2CPU.pcf -ucf SOC-Sword.ucf 
+bitgen -intstyle ise -f Top_OExp07_IP2CPU.ut Top_OExp07_IP2CPU.ncd 

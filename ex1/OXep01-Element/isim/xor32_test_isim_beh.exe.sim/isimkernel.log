@@ -1,0 +1,28 @@
+Command line:
+   xor32_test_isim_beh.exe
+     -simmode  gui
+     -simrunnum  10
+     -socket  14982
+
+Sun Mar 05 13:43:00 2017
+
+
+ Elaboration Time: 0.109375 sec
+
+ Current Memory Usage: 1010.44 Meg
+
+ Total Signals          : 17
+ Total Nets             : 109
+ Total Signal Drivers   : 8
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 10
+ Total Traceable Variables  : 20
+ Total Scalar Nets and Variables : 253
+
+ Total Simulation Time: 0.125 sec
+
+ Current Memory Usage: 1010.44 Meg
+
+Sun Mar 05 13:48:26 2017
+

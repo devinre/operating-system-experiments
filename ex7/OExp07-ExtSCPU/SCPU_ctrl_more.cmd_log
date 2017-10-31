@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj OExp07-ExtSCPU -o E:/ex7/OExp07-ExtSCPU/SCPU_ctrl_more.tfi -lib work E:/ex7/OExp07-ExtSCPU//SCPU_ctrl_more.v -module SCPU_ctrl_more -template d:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

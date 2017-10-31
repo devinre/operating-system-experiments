@@ -1,0 +1,28 @@
+
+
+
+// Instantiate the module
+SOCMF instance_name (
+    .clk_100mhz(clk_100mhz), 
+    .K_COL(K_COL), 
+    .RSTN(RSTN), 
+    .SW(SW), 
+    .AN(AN), 
+    .Buzzer(Buzzer), 
+    .CR(CR), 
+    .K_ROW(K_ROW), 
+    .LED(LED), 
+    .LEDCLK(LEDCLK), 
+    .LEDCLR(LEDCLR), 
+    .LEDDT(LEDDT), 
+    .LEDEN(LEDEN), 
+    .RDY(RDY), 
+    .readn(readn), 
+    .SEGCLK(SEGCLK), 
+    .SEGCLR(SEGCLR), 
+    .SEGDT(SEGDT), 
+    .SEGEN(SEGEN), 
+    .SEGMENT(SEGMENT)
+    );
+
+

@@ -1,0 +1,5 @@
+sch2hdl -intstyle ise -family kintex7 -verilog alu_drc.vf -w E:/ex4/ALU/alu.sch 
+sch2hdl -intstyle ise -family kintex7 -verilog alu_drc.vf -w E:/ex4/ALU/alu.sch 
+sch2hdl -intstyle ise -family kintex7 -verilog alu_drc.vf -w E:/ex4/ALU/alu.sch 
+sch2hdl -intstyle ise -family kintex7 -verilog alu_drc.vf -w E:/ex4/ALU/alu.sch 
+xst -intstyle ise -ifn "E:/ex4/ALU/alu.xst" -ofn "E:/ex4/ALU/alu.syr" 

@@ -1,0 +1,25 @@
+
+
+
+// Instantiate the module
+Multi_8CH32 instance_name (
+    .clk(clk), 
+    .rst(rst), 
+    .EN(EN), 
+    .Test(Test), 
+    .point_in(point_in), 
+    .LES(LES), 
+    .Data0(Data0), 
+    .data1(data1), 
+    .data2(data2), 
+    .data3(data3), 
+    .data4(data4), 
+    .data5(data5), 
+    .data6(data6), 
+    .data7(data7), 
+    .Disp_num(Disp_num), 
+    .point_out(point_out), 
+    .LE_out(LE_out)
+    );
+
+

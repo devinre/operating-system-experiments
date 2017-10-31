@@ -1,0 +1,13 @@
+
+
+
+// Instantiate the module
+clk_div instance_name (
+    .clk(clk), 
+    .rst(rst), 
+    .SW2(SW2), 
+    .clkdiv(clkdiv), 
+    .Clk_CPU(Clk_CPU)
+    );
+
+

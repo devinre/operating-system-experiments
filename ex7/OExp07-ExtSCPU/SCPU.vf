@@ -1,0 +1,270 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : SCPU.vf
+// /___/   /\     Timestamp : 05/09/2017 16:58:50
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -sympath E:/ex7/OExp07-ExtSCPU/ipcore_dir -intstyle ise -family kintex7 -verilog E:/ex7/OExp07-ExtSCPU/SCPU.vf -w E:/ex7/OExp07-ExtSCPU/SCPU.sch
+//Design Name: SCPU
+//Device: kintex7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module alu_MUSER_SCPU(A, 
+                      ALU_Ctr, 
+                      B, 
+                      Co, 
+                      overflow, 
+                      res, 
+                      zero);
+
+    input [31:0] A;
+    input [2:0] ALU_Ctr;
+    input [31:0] B;
+   output Co;
+   output overflow;
+   output [31:0] res;
+   output zero;
+   
+   wire N0;
+   wire [31:0] XLXN_21;
+   wire [31:0] XLXN_22;
+   wire [31:0] XLXN_23;
+   wire [31:0] XLXN_24;
+   wire [31:0] XLXN_25;
+   wire [31:0] XLXN_26;
+   wire [31:0] XLXN_27;
+   wire [31:0] XLXN_29;
+   wire Co_DUMMY;
+   wire [31:0] res_DUMMY;
+   
+   assign Co = Co_DUMMY;
+   assign res[31:0] = res_DUMMY[31:0];
+   and32  ALU_U1 (.A(A[31:0]), 
+                 .B(B[31:0]), 
+                 .res(XLXN_21[31:0]));
+   or32  ALU_U2 (.A(A[31:0]), 
+                .B(B[31:0]), 
+                .res(XLXN_22[31:0]));
+   xor32  ALU_U3 (.A(A[31:0]), 
+                 .B(B[31:0]), 
+                 .res(XLXN_24[31:0]));
+   nor32  ALU_U4 (.A(A[31:0]), 
+                 .B(B[31:0]), 
+                 .res(XLXN_25[31:0]));
+   srl32  ALU_U5 (.A(A[31:0]), 
+                 .B(B[31:0]), 
+                 .res(XLXN_26[31:0]));
+   or_bit_32  ALU_Zero (.A(res_DUMMY[31:0]), 
+                       .o(zero));
+   MUX8T1_32  MUXALU (.I0(XLXN_21[31:0]), 
+                     .I1(XLXN_22[31:0]), 
+                     .I2(XLXN_23[31:0]), 
+                     .I3(XLXN_24[31:0]), 
+                     .I4(XLXN_25[31:0]), 
+                     .I5(XLXN_26[31:0]), 
+                     .I6(XLXN_23[31:0]), 
+                     .I7({N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, 
+         N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, 
+         N0, Co_DUMMY}), 
+                     .s(ALU_Ctr[2:0]), 
+                     .o(res_DUMMY[31:0]));
+   GND  XLXI_11 (.G(N0));
+   ADC32  XLXI_12 (.A(A[31:0]), 
+                  .B(XLXN_29[31:0]), 
+                  .C0(ALU_Ctr[2]), 
+                  .Co(Co_DUMMY), 
+                  .S(XLXN_23[31:0]));
+   SignalExt_32  XLXI_14 (.S(ALU_Ctr[2]), 
+                         .So(XLXN_27[31:0]));
+   xor32  XLXI_15 (.A(XLXN_27[31:0]), 
+                  .B(B[31:0]), 
+                  .res(XLXN_29[31:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module Data_path_more_MUSER_SCPU(ALUSrc_B, 
+                                 ALU_Control, 
+                                 Branch, 
+                                 clk, 
+                                 DatatoReg, 
+                                 Data_in, 
+                                 inst_field, 
+                                 Jal, 
+                                 RegDst, 
+                                 RegWrite, 
+                                 rst, 
+                                 ALU_out, 
+                                 Data_out, 
+                                 overflow, 
+                                 PC_out, 
+                                 zero);
+
+    input ALUSrc_B;
+    input [2:0] ALU_Control;
+    input [1:0] Branch;
+    input clk;
+    input [1:0] DatatoReg;
+    input [31:0] Data_in;
+    input [25:0] inst_field;
+    input Jal;
+    input RegDst;
+    input RegWrite;
+    input rst;
+   output [31:0] ALU_out;
+   output [31:0] Data_out;
+   output overflow;
+   output [31:0] PC_out;
+   output zero;
+   
+   wire [31:0] branch_pc;
+   wire [31:0] Imm_32;
+   wire N0;
+   wire [31:0] pc_4;
+   wire [31:0] rdata_A;
+   wire V5;
+   wire [31:0] XLXN_10;
+   wire [31:0] XLXN_27;
+   wire [4:0] XLXN_66;
+   wire [4:0] XLXN_67;
+   wire [31:0] XLXN_73;
+   wire [31:0] ALU_out_DUMMY;
+   wire [31:0] Data_out_DUMMY;
+   wire [31:0] PC_out_DUMMY;
+   
+   assign ALU_out[31:0] = ALU_out_DUMMY[31:0];
+   assign Data_out[31:0] = Data_out_DUMMY[31:0];
+   assign PC_out[31:0] = PC_out_DUMMY[31:0];
+   add_32  ADD_Branch (.a(pc_4[31:0]), 
+                      .b({Imm_32[29:0], N0, N0}), 
+                      .c(branch_pc[31:0]));
+   add_32  ADD_PC_4 (.a(PC_out_DUMMY[31:0]), 
+                    .b({N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, 
+         N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, N0, V5, N0, 
+         N0}), 
+                    .c(pc_4[31:0]));
+   Ext_32  Ext (.imm_16(inst_field[15:0]), 
+               .Imm_32(Imm_32[31:0]));
+   MUX2T1_5  MUXD1 (.I0(inst_field[20:16]), 
+                   .I1({V5, V5, V5, V5, V5}), 
+                   .s(Jal), 
+                   .o(XLXN_66[4:0]));
+   MUX2T1_32  MUXD3 (.I0(Data_out_DUMMY[31:0]), 
+                    .I1(Imm_32[31:0]), 
+                    .s(ALUSrc_B), 
+                    .o(XLXN_27[31:0]));
+   REG32  PC (.CE(V5), 
+             .clk(clk), 
+             .D(XLXN_10[31:0]), 
+             .rst(rst), 
+             .Q(PC_out_DUMMY[31:0]));
+   alu_MUSER_SCPU  U1_1 (.A(rdata_A[31:0]), 
+                        .ALU_Ctr(ALU_Control[2:0]), 
+                        .B(XLXN_27[31:0]), 
+                        .overflow(overflow), 
+                        .res(ALU_out_DUMMY[31:0]), 
+                        .zero(zero));
+   Regs  U2_2 (.clk(clk), 
+              .L_S(RegWrite), 
+              .rst(rst), 
+              .R_addr_A(inst_field[25:21]), 
+              .R_addr_B(inst_field[20:16]), 
+              .Wt_addr(XLXN_67[4:0]), 
+              .Wt_data(XLXN_73[31:0]), 
+              .rdata_A(rdata_A[31:0]), 
+              .rdata_B(Data_out_DUMMY[31:0]));
+   VCC  XLXI_2 (.P(V5));
+   GND  XLXI_9 (.G(N0));
+   MUX4T1_32  XLXI_10 (.I0(pc_4[31:0]), 
+                      .I1(branch_pc[31:0]), 
+                      .I2({pc_4[31:28], inst_field[25:0], N0, N0}), 
+                      .I3(rdata_A[31:0]), 
+                      .s(Branch[1:0]), 
+                      .o(XLXN_10[31:0]));
+   MUX2T1_5  XLXI_11 (.I0(XLXN_66[4:0]), 
+                     .I1(inst_field[15:11]), 
+                     .s(RegDst), 
+                     .o(XLXN_67[4:0]));
+   MUX4T1_32  XLXI_12 (.I0(ALU_out_DUMMY[31:0]), 
+                      .I1(Data_in[31:0]), 
+                      .I2({inst_field[15:0], N0, N0, N0, N0, N0, N0, N0, N0, 
+         N0, N0, N0, N0, N0, N0, N0, N0}), 
+                      .I3(pc_4[31:0]), 
+                      .s(DatatoReg[1:0]), 
+                      .o(XLXN_73[31:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module SCPU(clk, 
+            Data_in, 
+            inst_in, 
+            INT, 
+            MIO_ready, 
+            reset, 
+            Addr_out, 
+            CPU_MIO, 
+            Data_out, 
+            mem_w, 
+            PC_out);
+
+    input clk;
+    input [31:0] Data_in;
+    input [31:0] inst_in;
+    input INT;
+    input MIO_ready;
+    input reset;
+   output [31:0] Addr_out;
+   output CPU_MIO;
+   output [31:0] Data_out;
+   output mem_w;
+   output [31:0] PC_out;
+   
+   wire [1:0] XLXN_11;
+   wire [1:0] XLXN_13;
+   wire [2:0] XLXN_15;
+   wire XLXN_22;
+   wire XLXN_23;
+   wire XLXN_25;
+   wire XLXN_27;
+   wire XLXN_35;
+   
+   SCPU_ctrl_more  XLXI_1 (.Fun(inst_in[5:0]), 
+                          .MIO_ready(MIO_ready), 
+                          .OPcode(inst_in[31:26]), 
+                          .zero(XLXN_35), 
+                          .ALUSrc_B(XLXN_23), 
+                          .ALU_Control(XLXN_15[2:0]), 
+                          .Branch(XLXN_13[1:0]), 
+                          .CPU_MIO(CPU_MIO), 
+                          .DatatoReg(XLXN_11[1:0]), 
+                          .Jal(XLXN_25), 
+                          .mem_w(mem_w), 
+                          .RegDst(XLXN_22), 
+                          .RegWrite(XLXN_27));
+   Data_path_more_MUSER_SCPU  XLXI_2 (.ALUSrc_B(XLXN_23), 
+                                     .ALU_Control(XLXN_15[2:0]), 
+                                     .Branch(XLXN_13[1:0]), 
+                                     .clk(clk), 
+                                     .DatatoReg(XLXN_11[1:0]), 
+                                     .Data_in(Data_in[31:0]), 
+                                     .inst_field(inst_in[25:0]), 
+                                     .Jal(XLXN_25), 
+                                     .RegDst(XLXN_22), 
+                                     .RegWrite(XLXN_27), 
+                                     .rst(reset), 
+                                     .ALU_out(Addr_out[31:0]), 
+                                     .Data_out(Data_out[31:0]), 
+                                     .overflow(), 
+                                     .PC_out(PC_out[31:0]), 
+                                     .zero(XLXN_35));
+endmodule

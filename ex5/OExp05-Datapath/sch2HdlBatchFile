@@ -1,0 +1,2 @@
+sch2hdl,-sympath,E:/ex5/OExp05-Datapath/ipcore_dir,-intstyle,ise,-family,kintex7,-verilog,E:/ex5/OExp05-Datapath/Data_path.vf,-w,E:/ex5/OExp05-Datapath/Data_path.sch
+sch2hdl,-sympath,E:/ex5/OExp05-Datapath/ipcore_dir,-intstyle,ise,-family,kintex7,-verilog,E:/ex5/OExp05-Datapath/SCPU.vf,-w,E:/ex5/OExp05-Datapath/SCPU.sch

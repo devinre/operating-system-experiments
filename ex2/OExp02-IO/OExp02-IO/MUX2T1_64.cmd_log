@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj OExp02-IO -o E:/ex2/OExp02-IO/MUX2T1_64.tfi -lib work E:/ex2/OExp02-IO//MUX2T1_64.v -module MUX2T1_64 -template d:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

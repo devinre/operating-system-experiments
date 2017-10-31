@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj OExp03-IP2SOC -o E:/ex3/OExp03-IP2SOC/clk_div.tfi -lib work E:/ex3/OExp03-IP2SOC//clk_div.v -module clk_div -template d:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

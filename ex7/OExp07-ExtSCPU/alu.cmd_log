@@ -1,0 +1,2 @@
+sch2hdl -sympath E:/ex7/OExp07-ExtSCPU/ipcore_dir -intstyle ise -family kintex7 -verilog alu_drc.vf -w E:/ex7/OExp07-ExtSCPU/alu.sch 
+sch2hdl -sympath E:/ex7/OExp07-ExtSCPU/ipcore_dir -intstyle ise -family kintex7 -verilog alu_drc.vf -w E:/ex7/OExp07-ExtSCPU/alu.sch 

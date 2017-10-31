@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "E:/ex1/OXep01-Element/SignalExt_32_test_isim_beh.exe" -prj "E:/ex1/OXep01-Element/SignalExt_32_test_beh.prj" "work.SignalExt_32_test" "work.glbl" 

@@ -1,0 +1,56 @@
+Running: d:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o E:/ex7/OExp07-ExtSCPU/Data_path_more_Data_path_more_sch_tb_isim_beh.exe -prj E:/ex7/OExp07-ExtSCPU/Data_path_more_Data_path_more_sch_tb_beh.prj work.Data_path_more_Data_path_more_sch_tb work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "E:/ex7/OExp07-ExtSCPU/xor32.v" into library work
+Analyzing Verilog file "E:/ex7/OExp07-ExtSCPU/srl32.v" into library work
+Analyzing Verilog file "E:/ex7/OExp07-ExtSCPU/SignalExt_32.v" into library work
+Analyzing Verilog file "E:/ex7/OExp07-ExtSCPU/or_bit_32.v" into library work
+Analyzing Verilog file "E:/ex7/OExp07-ExtSCPU/or32.v" into library work
+Analyzing Verilog file "E:/ex7/OExp07-ExtSCPU/nor32.v" into library work
+Analyzing Verilog file "E:/ex7/OExp07-ExtSCPU/MUX8T1_32.v" into library work
+Analyzing Verilog file "E:/ex7/OExp07-ExtSCPU/and32.v" into library work
+Analyzing Verilog file "E:/ex7/OExp07-ExtSCPU/ADC32.v" into library work
+Analyzing Verilog file "E:/ex7/OExp07-ExtSCPU/regs.v" into library work
+Analyzing Verilog file "E:/ex7/OExp07-ExtSCPU/REG32.v" into library work
+Analyzing Verilog file "E:/ex7/OExp07-ExtSCPU/MUX4T1_32.v" into library work
+Analyzing Verilog file "E:/ex7/OExp07-ExtSCPU/MUX2T1_5.v" into library work
+Analyzing Verilog file "E:/ex7/OExp07-ExtSCPU/MUX2T1_32.v" into library work
+Analyzing Verilog file "E:/ex7/OExp07-ExtSCPU/Ext_32.v" into library work
+Analyzing Verilog file "E:/ex7/OExp07-ExtSCPU/alu.vf" into library work
+Analyzing Verilog file "E:/ex7/OExp07-ExtSCPU/add_32.v" into library work
+Analyzing Verilog file "E:/ex7/OExp07-ExtSCPU/Data_path_more.vf" into library work
+Analyzing Verilog file "E:/ex7/OExp07-ExtSCPU/datapath_more_test.v" into library work
+Analyzing Verilog file "d:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:1016 - "E:/ex7/OExp07-ExtSCPU/Data_path_more.vf" Line 171: Port Co is not connected to this instance
+Completed static elaboration
+Compiling module add_32
+Compiling module Ext_32
+Compiling module MUX2T1_5
+Compiling module MUX2T1_32
+Compiling module REG32
+Compiling module and32
+Compiling module or32
+Compiling module xor32
+Compiling module nor32
+Compiling module srl32
+Compiling module or_bit_32
+Compiling module MUX8T1_32
+Compiling module GND
+Compiling module ADC32
+Compiling module SignalExt_32
+Compiling module alu_MUSER_Data_path_more
+Compiling module Regs
+Compiling module VCC
+Compiling module MUX4T1_32
+Compiling module Data_path_more
+Compiling module Data_path_more_Data_path_more_sc...
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 15 sub-compilation(s) to finish...
+Compiled 22 Verilog Units
+Built simulation executable E:/ex7/OExp07-ExtSCPU/Data_path_more_Data_path_more_sch_tb_isim_beh.exe
+Fuse Memory Usage: 28888 KB
+Fuse CPU Usage: 655 ms

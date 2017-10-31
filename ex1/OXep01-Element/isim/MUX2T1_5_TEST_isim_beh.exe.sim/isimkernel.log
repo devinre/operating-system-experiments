@@ -1,0 +1,28 @@
+Command line:
+   MUX2T1_5_TEST_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  1316
+
+Sat Mar 04 17:03:15 2017
+
+
+ Elaboration Time: 0.140625 sec
+
+ Current Memory Usage: 1010.45 Meg
+
+ Total Signals          : 17
+ Total Nets             : 29
+ Total Signal Drivers   : 9
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 12
+ Total Traceable Variables  : 22
+ Total Scalar Nets and Variables : 125
+
+ Total Simulation Time: 0.203125 sec
+
+ Current Memory Usage: 538.587 Meg
+
+Sat Mar 04 17:45:31 2017
+

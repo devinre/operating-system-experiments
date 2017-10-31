@@ -1,0 +1,22 @@
+// Verilog instantiation template created from schematic E:\ex2\OExp02-IO\OExp02-IO\MC14495_ZJU.sch - Wed Mar 08 10:25:07 2017
+//
+// Notes: 
+// To use this template to instantiate this component,cut-and-paste and then edit
+//
+// Instantiate the UUT
+   MC14495_ZJU UUT (
+		.D2(    ), 
+		.D1(    ), 
+		.D0(    ), 
+		.LE(    ), 
+		.a(    ), 
+		.b(    ), 
+		.c(    ), 
+		.d(    ), 
+		.e(    ), 
+		.f(    ), 
+		.g(    ), 
+		.point(    ), 
+		.p(    ), 
+		.D3(    )
+   );

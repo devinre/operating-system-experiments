@@ -1,0 +1,17 @@
+
+
+
+// Instantiate the module
+SEnter_2_32 instance_name (
+    .clk(clk), 
+    .BTN(BTN), 
+    .Ctrl(Ctrl), 
+    .D_ready(D_ready), 
+    .Din(Din), 
+    .readn(readn), 
+    .Ai(Ai), 
+    .Bi(Bi), 
+    .blink(blink)
+    );
+
+

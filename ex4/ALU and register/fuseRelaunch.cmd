@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "E:/ex4/ALU and register/alu_alu_sch_tb_isim_beh.exe" -prj "E:/ex4/ALU and register/alu_alu_sch_tb_beh.prj" "work.alu_alu_sch_tb" "work.glbl" 

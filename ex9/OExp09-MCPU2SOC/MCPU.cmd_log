@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj OExp09-MCPU2SOC -o E:/ex9/OExp09-MCPU2SOC/MCPU.tfi -lib work E:/ex9/OExp09-MCPU2SOC//MCPU.v -module MCPU -template d:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

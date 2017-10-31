@@ -1,0 +1,11 @@
+[Inputs]
+C0
+=A[31:0]=
+=B[31:0]=
+[Outputs]
+Co
+=S[31:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel ADC32
+

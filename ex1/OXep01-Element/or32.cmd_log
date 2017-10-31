@@ -1,0 +1,2 @@
+vhdtdtfi -lib work E:/ex1/OXep01-Element/or32.v -lang verilog -prj OXep01-Element -o or32.spl -module or32 -template d:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family kintex7 or32.spl E:/ex1/OXep01-Element/or32.sym 

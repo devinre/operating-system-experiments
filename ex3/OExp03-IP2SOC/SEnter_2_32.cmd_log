@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj OExp03-IP2SOC -o E:/ex3/OExp03-IP2SOC/SEnter_2_32.tfi -lib work E:/ex3/OExp03-IP2SOC//SEnter_2_32_IO.v -module SEnter_2_32 -template d:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

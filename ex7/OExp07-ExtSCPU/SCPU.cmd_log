@@ -1,0 +1,1 @@
+sch2hdl -sympath E:/ex7/OExp07-ExtSCPU/ipcore_dir -intstyle ise -family kintex7 -verilog SCPU_drc.vf -w E:/ex7/OExp07-ExtSCPU/SCPU.sch 
